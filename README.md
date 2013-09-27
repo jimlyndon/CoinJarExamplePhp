@@ -19,8 +19,8 @@ and use `composer` to install dependencies using the `create-project` command:
     curl -s https://getcomposer.org/installer | php --
 
     cd my/project/dir
-    git clone git://github.com/zendframework/ZendSkeletonApplication.git
-    cd ZendSkeletonApplication
+    git clone https://github.com/jimlyndon/CoinJarExamplePhp.git
+    cd CoinJarExamplePhp
     php composer.phar self-update
     php composer.phar install
 
