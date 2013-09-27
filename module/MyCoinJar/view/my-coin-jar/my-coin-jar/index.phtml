@@ -1,0 +1,93 @@
+<header>
+    <div class="row">
+        <div class="twelve columns">
+            <a class="sidebar-button show-for-small" id="sidebarButton" href="#sidebar"><img src="images/offcanvas/menu-wht.png"><h4>CoinJar</h4></a>
+            <h1 class="hide-for-small"><?php echo $account->user->full_name; ?></h1>
+            <h4 class="hide-for-small">Email: <?php echo $account->user->email; ?></h4>
+            <h4 class="hide-for-small">Available: ฿<?php echo $account->user->available_balance; ?></h4>
+            <h4 class="hide-for-small">Unconfirmed: ฿<?php echo $account->user->unconfirmed_balance; ?></h4>
+        </div>
+    </div>
+</header>
+<div class="row">
+    <div class="large-9 columns">
+        <h3>Transactions</h3>
+        <div class="row">
+            <div class="large-12 columns">
+                <table class="responsive">
+                    <tbody>
+                    <tr>
+                        <th>Sender/Recipient</th>
+                        <th>Processed</th>
+                        <th>Amount</th>
+                    </tr>
+                    <?php foreach ($transactions as $transaction) : ?>
+                        <tr>
+                            <td>
+                                <?php echo $transaction->counterparty_type; ?> <?php echo $transaction->counterparty_name; ?>
+                                <h6 class="subheader"><?php echo $transaction->status; ?></h6>
+                            </td>
+                            <td><?php echo $transaction->updated_at;?></td>
+                            <td><strong><?php echo $transaction->amount;?></strong></td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h3>Addresses</h3>
+        <div class="row">
+            <div class="large-12 columns">
+                <table class="responsive">
+                    <tbody>
+                    <tr>
+                        <th>Address</th>
+                        <th>Received</th>
+                        <th>Confirmed</th>
+                    </tr>
+                    <?php foreach ($addresses as $address) : ?>
+                        <tr>
+                            <td><?php echo $address->address; ?> <?php echo $address->label; ?></td>
+                            <td><?php echo $address->total_received;?></td>
+                            <td><?php echo $address->total_confirmed;?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="large-3 small-3 columns">
+        <h3>CoinJar Fair Rates</h3>
+        <table class="responsive">
+            <tbody>
+            <tr>
+                <th>Currency</th>
+                <th>Bid</th>
+                <th>Spot</th>
+                <th>Ask</th>
+            </tr>
+            <?php foreach ($fair_rates as $currency => $fair_rate) : ?>
+                <tr>
+                    <td><?php echo $currency;?></td>
+                    <td><?php echo $fair_rate->bid;?></td>
+                    <td><strong><?php echo $fair_rate->spot;?></strong></td>
+                    <td><?php echo $fair_rate->ask;?></td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+            lobortis nisl ut aliquip ex ea commodo consequat.
+        </p>
+
+        <h4>Lorem ipsum</h4>
+        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+        <ul class="disc">
+            <li><a href="">Consectetuer Adipiscing</a><br />Nam liber tempor cum soluta nobis eleifend option congue.</li>
+            <li><a href="">Nonummy Nibh</a><br />Typi non habent claritatem insitam.</li>
+            <li><a href="">Minim Veniam</a><br />Investigationes lectores legere me lius quod ii legunt saepius.</li>
+        </ul>
+    </div>
+</div>
