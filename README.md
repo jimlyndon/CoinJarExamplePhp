@@ -88,9 +88,9 @@ Within this file, create a virtual host config, something like:
 Save this file.
 
 Finally restsart Apache:
-```
+
     root# apachectl restart
-```
+
 Now you should be able to navigate to your site at `http://yourapp.localhost/`
 
 Direct any issues/problems/questions/complaints @jimlyndon  :)
