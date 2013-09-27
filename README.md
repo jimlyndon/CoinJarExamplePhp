@@ -1,4 +1,4 @@
-ZendSkeletonApplication
+CoinJar API Starter Application
 =======================
 
 Introduction
@@ -30,8 +30,9 @@ available.)
 You would then invoke `composer` to install dependencies per the previous
 example.
 
+
 API Key
-____________
+-------
 Make sure you get an API key from CoinJar.io.  First create an account - best to use the sandbox environment where
 you can send and receive fake bitcoins when starting out.  To do this sign up at
 
