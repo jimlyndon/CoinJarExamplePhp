@@ -52,40 +52,40 @@ project and you should be ready to go!  Follow this how-to: http://www.thegeekst
 or the following for simply instructions:
 
 Get root to make Apache changes
-$ sudo su -
+    $ sudo su -
 
 
 Next edit the Apache config:
-root# vi /etc/apache2/httpd.conf
+    root# vi /etc/apache2/httpd.conf
 
 Within this file, find the Virtual hosts section and uncomment the following:
-Include /private/etc/apache2/extra/httpd-vhosts.conf
+    Include /private/etc/apache2/extra/httpd-vhosts.conf
 
 Save this file.
 
 Next edit the vhosts config:
-root# vi /etc/apache2/extra/httpd-vhosts.conf
+    root# vi /etc/apache2/extra/httpd-vhosts.conf
 
 Within this file, create a virtual host config, something like:
 
-<VirtualHost *:80>
-    ServerName yourapp.localhost
-    DocumentRoot /Users/you/yourapp/public
-    SetEnv APPLICATION_ENV "development"
-    <Directory /Users/you/yourapp/public>
-    SetEnv APPLICATION_ENV "development"
-        DirectoryIndex index.php
-        AllowOverride All
-        Order allow,deny
-        Allow from all
-    </Directory>
-</VirtualHost>
+    <VirtualHost *:80>
+        ServerName yourapp.localhost
+        DocumentRoot /Users/you/yourapp/public
+        SetEnv APPLICATION_ENV "development"
+        <Directory /Users/you/yourapp/public>
+        SetEnv APPLICATION_ENV "development"
+            DirectoryIndex index.php
+            AllowOverride All
+            Order allow,deny
+            Allow from all
+        </Directory>
+    </VirtualHost>
 
 Save this file.
 
 Finally restsart Apache:
-root# apachectl restart
+    root# apachectl restart
 
-Now you should be able to navigate to your site at http://yourapp.localhost/
+Now you should be able to navigate to your site at `http://yourapp.localhost/`
 
 Direct any issues/problems/questions/complaints @jimlyndon  :)
