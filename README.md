@@ -34,9 +34,9 @@ example.
 API Key
 -------
 Make sure you get an API key from CoinJar.io.  First create an account - best to use the sandbox environment where
-you can send and receive fake bitcoins when starting out.  To do this sign up at
+you can send and receive fake bitcoins when starting out.  To do this sign up at https://secure.sandbox.coinjar.io/users/sign_in
 
-You can create a bitcoin address to send test bitcoin to from http://testnet.mojocoin.com/
+You can create a "bitcoin address" to send test bitcoin to from http://testnet.mojocoin.com/
 You can return to them some bitcoin as well.  This will give you some transaction data for your sandbox.
 Finally you need to turn on your API by going to account settings -> API access -> Enable API
 This will ask you for your credentials and display an API key.
