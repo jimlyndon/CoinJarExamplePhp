@@ -10,7 +10,7 @@ use Zend\View\Model\ViewModel;
 use Zend\Json\Json;
 
 class CoinJarRest {
-    const APIKey = "REPLACE_WITH_YOUR_KEY";
+    const APIKey = "sFMzjhnp633sFzgzUMDfN6kVxkY9EWCe6NxiwzqQyBXnqGpv";
     const APIRoot = "https://secure.sandbox.coinjar.io/api"; // sandbox endpoint
     //const APIRoot = "https://api.coinjar.io"; // production endpoint
     const Account = "/v1/account.json";
