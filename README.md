@@ -34,14 +34,21 @@ example.
 API Key
 -------
 Make sure you get an API key from CoinJar.io.  First create an account - best to use the sandbox environment where
-you can send and receive fake bitcoins when starting out.  To do this sign up at https://secure.sandbox.coinjar.io/users/sign_in
+you can send and receive fake bitcoins when starting out.  To do this 
+[sign up](https://secure.sandbox.coinjar.io/users/sign_in) for a Coinjar Sandbox account.
 
-You can create a "bitcoin address" to send test bitcoin to from http://testnet.mojocoin.com/
-You can return to them some bitcoin as well.  This will give you some transaction data for your sandbox.
-Finally you need to turn on your API by going to account settings -> API access -> Enable API
+In your CoinJar sandbox account you can create a "bitcoin address" and send test bitcoin to this address 
+from a [Faucet](http://testnet.mojocoin.com/).  You can return to them some test bitcoin as well.  You can create
+addresses under your account and send/receive bitcoin, this way you have some test transactional data to work with.
+
+Finally you need to turn on your user API access by going to account settings -> API access -> Enable API.
 This will ask you for your credentials and display an API key.
 
-In the file /module/MyCoinJar/src/MyCoinJar/Controller/MyCoinJarController.php
+If you're building a merchant application you will also need to 
+[retrieve your merchant id and key](https://checkout.sandbox.coinjar.io/merchant/credentials) from your Sandbox account
+or from the [live/production Coinjar website](https://checkout.coinjar.io/merchant/credentials)
+
+Currently this example application is only using the user API.  So in the file /module/MyCoinJar/src/MyCoinJar/Controller/MyCoinJarController.php
 replace the key in the line `const APIKey = "REPLACE_WITH_YOUR_KEY";` with your API key.
 
 
